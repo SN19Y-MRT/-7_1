@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+<<<<<<< HEAD
 
 /**
  * 特定IDのpostを表示する
@@ -27,3 +28,13 @@ public function create()
 }
 
 ?>
+=======
+    public function index(Post $post)
+{
+    return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
+} 
+
+
+}
+
+>>>>>>> origin/master
