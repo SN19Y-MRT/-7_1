@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index(Post $post)
-{
-    return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
-}
 
 /**
  * 特定IDのpostを表示する
@@ -20,7 +16,12 @@ class PostController extends Controller
  */
 public function show(Post $post)
 {
-    return view('views/show')->with(['post' => $post]);
+    return view('posts/show')->with(['post' => $post]);
+}
+
+public function create()
+{
+    return view('posts/create');
 }
 
 }
