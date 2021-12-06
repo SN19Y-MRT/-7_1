@@ -7,6 +7,28 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+<<<<<<< HEAD
+
+/**
+ * 特定IDのpostを表示する
+ *
+ * @params Object Post // 引数の$postはid=1のPostインスタンス
+ * @return Reposnse post view
+ */
+public function show(Post $post)
+{
+    return view('posts/show')->with(['post' => $post]);
+}
+
+public function create()
+{
+    return view('posts/create');
+}
+
+}
+
+?>
+=======
     public function index(Post $post)
 {
     return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
@@ -15,3 +37,4 @@ class PostController extends Controller
 
 }
 
+>>>>>>> origin/master
