@@ -11,29 +11,26 @@
         <div class='posts'>
             @foreach ($posts as $post)
                 <div class='post'>
-<<<<<<< HEAD
-                    <h2 class='title'><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
-=======
-                            <h2 class='title'>
+
+<h2 class='title'>
     <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
 </h2>
 
->>>>>>> dev_basis03
+
+
                     <p class='body'>{{ $post->body }}</p>
                 </div>
             @endforeach
         </div>
-<<<<<<< HEAD
+
+        
+        [<a href='/posts/create'>create</a>]
+        
+
+
         <div class='paginate'>
             {{ $posts->links() }}
         </div>
-        
-=======
-        
-        <h2 class='title'>
-    <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
-</h2>
 
->>>>>>> dev_basis03
     </body>
 </html>
