@@ -11,8 +11,6 @@
 |
 */
 
-<<<<<<< HEAD
+
+
 Route::get('/', 'PostController@index');
-=======
-Route::get('/posts/{post}', 'PostController@show');
->>>>>>> dev_basis03
