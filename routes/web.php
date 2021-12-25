@@ -12,9 +12,29 @@
 */
 Route::get('/', 'PostController@index');
 Route::get('/posts/create', 'PostController@create');
+Route::post('/posts', 'PostController@store');
 Route::get('/posts/{post}', 'PostController@show');
 
-Route::post('/posts', 'PostController@store');
+
 
 Route::get('/posts/{post}/edit', 'PostController@edit');
 Route::put('/posts/{post}', 'PostController@update');
+
+Route::get('/info',function(){
+   phpinfo(); 
+});
+
+Route::get('/ja',function(){
+   $r = mb_detect_encoding("ああああ");
+   dd($r);
+});
+
+
+
+use  Illuminate\Support\Facades\DB;
+
+Route::get('/test',function(){
+    
+       $r = DB::insert( "insert into posts (title, body) values ('こんにちわ','aaaa')");
+   dd($r);
+});
